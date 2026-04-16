@@ -1,0 +1,436 @@
+@import url('fonts.googleapis.com');
+
+:root {
+  --black: #1e1e1e;
+  --white: #ffffff;
+  --dark: #b6b6b6;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav_link {
+  color: var(--white);
+  white-space: nowrap;
+}
+
+
+.container {
+  max-width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.black {
+  color: var(--white);
+  background-color: var(--black);
+}
+
+
+.title-h1 {
+  font-size: 72px;
+  font-family: "Space Grotesk", sans-serif;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.hover{
+  font-size: 18px;
+  font-family: "Space Grotesk", sans-serif;
+  background: var(--black);
+  color: var(--white);
+  font-size: x-large;
+  border: none;
+  border-radius: 25px;
+  transition: 1s;
+  text-align: center; 
+}
+
+
+.bestsellers {
+  margin-top: 40px;
+  padding-left: 210px;
+  background-color: inherit;
+}
+
+.title-h2 {
+  font-size: 50px;
+  font-family: 'Space Grotesk', sans-serif;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.main_text {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 24px;
+  margin-right: 400px;
+}
+
+.text {
+  font-size: 24px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.header_logo {
+  size: 10%;
+}
+
+.nav {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.nav_link {
+  color: var(--white);
+}
+
+.hero-btn {
+  position: relative;
+  padding: 15px 30px;
+  background-color: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  font-size: 18px;
+  font-family: 'Space Grotesk', sans-serif;
+  border-radius: 0;
+}
+
+.hero-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+  z-index: -1;
+}
+
+.hero-btn:hover {
+  color: var(--black);
+}
+
+.hero-btn:hover::before {
+  transform: scaleX(1);
+}
+
+#theme-btn {
+  background: none;
+  color: var(--white);
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.light {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.light .nav_link {
+  color: var(--black);
+}
+
+.light .black {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.hero {
+  background-image: url('../images/cover.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.card_container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 40px;
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: inherit;
+  /* align-items: center; */
+}
+
+.card {
+  padding-top: 30px;
+  padding-bottom: 15px;
+  display: flex;
+  width: 325px;
+  margin: 40px;
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: inherit;
+  flex-direction: column;
+  align-items: center;
+  color: inherit;
+  border: 3px solid currentColor;
+  position: relative;
+
+}
+
+.card img {
+  width: 80%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.card-content {
+  text-align: center; 
+  margin-top: 10px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.buy {
+  position: relative;
+  padding: 15px 30px;
+  background-color: transparent;
+  color: var(--black);
+  border: 2px solid var(--black);
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  font-size: 18px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.buy::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--black);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+  z-index: -1;
+}
+
+.buy:hover::before {
+  transform: scaleX(1);
+}
+
+.buy:hover {
+  color: var(--white);
+}
+
+.like {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.like.active {
+  color: var(--black);
+}
+
+.h3 {
+  font-size: 24px;
+  font-family: 'Space Grotesk', sans-serif;
+  margin-bottom: 10px;
+}
+
+.p {
+  font-size: 18px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.form-section {
+  padding: 40px 0;
+  background-color: inherit;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+}
+
+.form input,
+.form select,
+.form textarea {
+  padding: 15px;
+  border: 2px solid currentColor;
+  background-color: inherit;
+  color: inherit;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 16px;
+}
+
+.form textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: var(--black);
+}
+
+
+.light #theme-btn {
+  border: 2px solid var(--black);
+  color: var(--black);
+}
+
+.light .card_container,
+.light .form-section,
+.light .bestsellers {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.light .card {
+  background-color: var(--white);
+  color: var(--black);
+  border: 3px solid var(--black);
+}
+
+.light .buy {
+  color: var(--black);
+  border: 2px solid var(--black);
+}
+
+.light .buy::before {
+  background-color: var(--black);
+}
+
+.light .buy:hover {
+  color: var(--white);
+}
+
+.dark-theme {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.dark-theme .bestsellers,
+.dark-theme .card_container,
+.dark-theme .form-section,
+.dark-theme .main.small,
+.dark-theme .container {
+  color: var(--white);
+}
+
+.dark-theme .bestsellers,
+.dark-theme .card_container,
+.dark-theme .form-section {
+  background-color: var(--black);
+}
+
+.dark-theme .title-h2,
+.dark-theme .main_desc,
+.dark-theme h3,
+.dark-theme p {
+  color: var(--white);
+}
+
+.dark-theme .card {
+  background-color: var(--black);
+  color: var(--white);
+  border: 3px solid var(--white);
+}
+
+.dark-theme .buy {
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
+.dark-theme .buy::before {
+  background-color: var(--white);
+}
+
+.dark-theme .buy:hover {
+  color: var(--black);
+}
+
+.dark-theme .form input,
+.dark-theme .form select,
+.dark-theme .form textarea {
+  background-color: var(--black);
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
+.dark-theme .form input::placeholder,
+.dark-theme .form textarea::placeholder {
+  color: var(--white);
+}
+
+.dark-theme .like {
+  color: var(--white);
+}
+
+.dark-theme #theme-btn {
+  border: 2px solid var(--white);
+  color: var(--white);
+}
+
+.dark-theme .footer {
+  background-color: var(--black);
+  color: var(--white);
+}
